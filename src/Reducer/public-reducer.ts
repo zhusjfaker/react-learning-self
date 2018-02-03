@@ -12,7 +12,12 @@ const work = (state: ParentStoreState, action: ParentAction): ParentStoreState =
     }
 }
 
+const band = (state: ParentStoreState, action: ParentAction): ParentStoreState => {
+    let new_state: ParentStoreState = state ? state : { name: "ggggggg" }
+    return new_state
+}
+
 
 export const reducer = combineReducers<ParentStoreState>({
-    work
+    work,band
 })

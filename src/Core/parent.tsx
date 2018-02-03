@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactChild } from './children';
+import ReactChild from './children';
 import { connect } from 'react-redux';
 import { mapStateToProps } from '../_Base/mapStateToProps';
 import { mapDispatchToProps } from '../_Base/mapDispatchToProps';
@@ -21,7 +21,6 @@ class ReactParent extends React.Component<IParentProps, IParentState> {
     }
 
     render() {
-        debugger
         return (
             <div>
                 <h1>{this.props.name}</h1>
