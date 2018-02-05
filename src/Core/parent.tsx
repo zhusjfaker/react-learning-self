@@ -9,12 +9,13 @@ interface IParentState {
 }
 
 export interface IParentProps {
-    name: string;
-    age: number;
-    changename(): void;
+    name?: string;
+    age?: number;
+    changename?(): void;
 }
 
-class ReactParent extends React.Component<IParentProps, IParentState> {
+@(connect(mapStateToProps, mapDispatchToProps) as any)
+export default class ReactParent extends React.Component<IParentProps, IParentState> {
 
     constructor(props: any) {
         super(props);
@@ -32,4 +33,3 @@ class ReactParent extends React.Component<IParentProps, IParentState> {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReactParent)

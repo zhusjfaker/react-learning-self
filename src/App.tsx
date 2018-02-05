@@ -18,7 +18,7 @@ class App extends React.Component {
             To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
         </div>
-        <ReactParent name="123" />
+        <ReactParent />
       </div>
     );
   }
