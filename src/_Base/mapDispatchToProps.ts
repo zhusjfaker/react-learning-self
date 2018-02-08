@@ -1,10 +1,11 @@
 import { Dispatch } from "react-redux";
-import { ParentAction } from "../Action/ParentAction";
+import { ParentAction, fetchPosts } from "../Action/ParentAction";
 
-export const mapDispatchToProps = (dispatch: Dispatch<ParentAction>, ownProps: any) => {
+export const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
     return {
         changename: () => dispatch({ type: "first-redux" }),
-        add: () => dispatch({ type: "add-age" })
+        add: () => dispatch({ type: "add-age" }),
+        async_add:()=>dispatch(fetchPosts(1))
     };
 }
 
